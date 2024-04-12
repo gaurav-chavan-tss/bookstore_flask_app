@@ -58,7 +58,7 @@ def get_book_by_id(bookid: int):
     finally:
         db.close()
 
-@app.route('/books/<int:bookid>',methods=['PUT'])
+@app.route('/books/<int:bookid>',methods=['PUT'])  
 def update_book(bookid: int):
     data = request.json
     new_book  = Book(title=data['title'], author=data['author'], isbn=data['isbn'], price=data['price'])
