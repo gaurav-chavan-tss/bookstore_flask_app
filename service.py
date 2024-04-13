@@ -22,6 +22,7 @@ class BookService:
             return {"code":500, "msg":"Book can not be added."}
 
         book_data = {
+            'id': new_book.id,
             'title': new_book.title,
             'author': new_book.author,
             'isbn': new_book.isbn,
@@ -68,7 +69,7 @@ class BookService:
         book_data = {
             'id' : book_temp.id,
             'title': book_temp.title,
-            'author':  book_temp.author,
+            'author':  book_temp.author,  
             'isbn':  book_temp.isbn,
             'price':  book_temp.price
         }

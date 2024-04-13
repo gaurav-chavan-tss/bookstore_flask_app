@@ -1,0 +1,27 @@
+responses:
+  200:
+    description: A list of books.
+    schema:
+      type: array
+      items:
+        $ref: '#/definitions/Book'
+
+definitions:
+  Book:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: The book's ID.
+      title:
+        type: string
+        description: The book's title.
+      author:
+        type: string
+        description: The book's author.
+      isbn:
+        type: string
+        description: The book's ISBN.
+      price:
+        type: number
+        description: The book's price.

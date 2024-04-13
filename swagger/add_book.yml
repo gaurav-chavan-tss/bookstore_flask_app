@@ -1,0 +1,31 @@
+parameters:
+  - in: body
+    name: body
+    description: Book object that needs to be added to the inventory
+    required: true
+    schema:
+      $ref: '#/definitions/BookRequest'
+
+responses:
+  201:
+    description: Book added successfully
+    schema:
+      $ref: '#/definitions/Book'
+
+definitions:
+  BookRequest:   # Define a new schema without the 'id' field
+    type: object
+    properties:
+      title:
+        type: string
+      author:
+        type: string
+      isbn:
+        type: string
+      price:
+        type: number
+    required:
+      - title
+      - author
+      - isbn
+      - price

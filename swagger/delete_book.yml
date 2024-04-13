@@ -1,0 +1,12 @@
+parameters:
+  - in: path
+    name: bookid
+    description: ID of the book to delete
+    required: true
+    type: integer
+
+responses:
+  201:
+    description: Book deleted successfully
+    schema:
+      $ref: '#/definitions/Book'
