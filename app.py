@@ -5,7 +5,6 @@ from database import Base, engine
 from sqlalchemy.orm import Session
 import model
 from model import Book
-
 from service import BookService
 from database import SessionLocal
 from flasgger import Swagger
@@ -96,4 +95,4 @@ def search_book():
         db.close()
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=5001)
+    app.run(debug=False,host="0.0.0.0", port=5000)
