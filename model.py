@@ -1,4 +1,4 @@
-from sqlalchemy import Integer,Column,String,Float
+from sqlalchemy import ForeignKey, Integer,Column,String,Float
 from database import Base
 from sqlalchemy.orm import relationship 
 
@@ -17,3 +17,7 @@ class Book(Base):
         self.isbn = isbn
         self.price = price
         self.author = author
+
+    
+
+

@@ -1,9 +1,41 @@
 parameters:
+ 
+    
   - in: query
-    name: title
+    name: search_term
+    description: Title of the book to search for
+    required: true
+    enum: ['title','author'] 
+
+  - in: query
+    name: search_item
     description: Title of the book to search for
     required: true
     type: string
+
+  - in: query
+    name: page
+    description: Page to view
+    required: true
+    type: integer
+
+  - in: query
+    name: page_size
+    description: Number of books want on each page
+    required: true
+    type: integer
+
+  - in: query
+    name: sort_by
+    description: Sorting of books by
+    required: false
+    enum: ['id', 'title', 'author', 'isbn', 'price']
+
+  - in: query
+    name: order_by
+    description: Ordering of books by
+    required: false
+    enum: ['asc', 'desc']
 
 responses:
   200:

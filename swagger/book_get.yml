@@ -6,6 +6,32 @@ responses:
       items:
         $ref: '#/definitions/Book'
 
+parameters:
+  - in: query
+    name: page
+    description: Page to view
+    required: true
+    type: integer
+
+  - in: query
+    name: page_size
+    description: Number of books want on each page
+    required: true
+    type: integer
+
+  - in: query
+    name: sort_by
+    description: Sorting of books by
+    required: false
+    enum: ['id', 'title', 'author', 'isbn', 'price']
+
+  - in: query
+    name: order_by
+    description: Ordering of books by
+    required: false
+    enum: ['asc', 'desc']
+
+
 definitions:
   Book:
     type: object

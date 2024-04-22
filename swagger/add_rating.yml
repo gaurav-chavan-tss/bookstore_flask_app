@@ -1,0 +1,26 @@
+parameters:
+  - in: body
+    name: body
+    description: Rating object that needs to be added to the inventory
+    required: true
+    schema:
+      $ref: '#/definitions/RatingRequest'
+
+responses:
+  201:
+    description: Rating added successfully
+    schema:
+      $ref: '#/definitions/Rating'
+
+definitions:
+  RatingRequest:   # Define a new schema without the 'id' field
+    type: object
+    properties:
+      book_id:
+        type: integer
+      rating:
+        type: integer
+    required:
+      - book_id
+      - rating
+     
